@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este es el juego para divertirte mientras adivinas qué cantante cantó esta canciión o estos versos">
+    <title>QUÉ CANTANTE DIJO...? - EL JUEGO DE ADIVINAR QUÉ CANTANTE DIJO ESTAS PALABRAS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="./images/favicon_32.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+    <!-- Pantalla inicial -->
+    <div class="index_container" id="index_container">
+        <button class="startGame" id="startGame">START GAME</button>
+    </div>
+
+    <!-- Pantalla juego --> 
+    <div class="game_container" id="game_container">
+        <div class="img_container">
+            <div class="img_left" id="L">
+                <img src="" id="imgL" />
+            </div>
+            <div class="img_right" id="R">
+                <img src="" id="imgR" />
+            </div>
+        </div>
+        <div class="quote" id="quote"></div>
+
+        <div class="chronometer">
+            <div class="circle">
+                <div id="time" class="time">10</div>
+            </div>
+        </div>
+
+        <div class="whosaid">¿QUIÉN DIJO?</div>
+        
+        <div class="footer">
+            <div class="highScore">High Score: <h5 id="highScore">max(x)</h5></div>
+            <div class="score">Score: <h5 id="score">x</h5></div>
+        </div>  
+    </div>
+
+    <!-- Pantalla final -->
+    <div class="gameover_container" id="gameover_container">
+        <img src="" id="gif"/>
+        <div class="finalScore_text">Tu puntuación:</div>
+        <div class="finalScore" id="finalScore">0</div>
+        <div class="buttons" id="gameOver_buttons">
+            <button class="backToMenu" id="backToMenuBtn">VOLVER AL MENU</button>
+            <button class="playAgain" id="playAgainBtn">JUGAR DE NUEVO</button>
+        </div>
+    </div>
+
+    <!-- scripts-->
+    <script src="app.js" type="module"></script>
+</body>
+</html>

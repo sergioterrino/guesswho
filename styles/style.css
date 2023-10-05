@@ -1,0 +1,444 @@
+*{
+    transition: all 0s ;
+}
+
+body{
+    font-family: Roboto, sans-serif;
+    margin: auto;
+    background-color: rgb(58, 58, 67);
+    font-style: bold;
+    overflow: hidden; /*Hace que desaparezca el scroll*/
+}
+
+#index_container{
+    display: flex;
+}
+
+#game_container{
+    display: none;
+}
+
+#gameover_container{
+    display: none;
+}
+
+/*--------pantalla inicial--------------------------------------*/
+#index_container{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    /* background-image: url(../images/indexFondo.jpg); */
+    background-image: url(../gifs/fondo.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+@font-face {
+    font-family: bernier;
+    src: url(../font/FONT-Bernier/bernier.ttf);
+}
+.logo{
+    margin: auto;
+    font-family: bernier;
+    font-size: 9.5vw;
+    color: white;
+    -webkit-text-stroke: 0.19vw black;
+    width: 40%;
+    height: 20%;
+    background-position: center;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 4%;
+    right: 0;
+    left: 0;
+} 
+
+#index_container button{
+    margin: auto;
+    padding: 1% 0% 1% 0%;
+    width: 19vw;
+    height: 10vh;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2.4vw;
+    font-family: bernier;
+    color: whitesmoke;
+    letter-spacing: 0.01em;
+    border: 0em solid white;
+    border-radius: 0.9em;
+    background-color: rgb(93, 192, 94);
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+}
+
+#index_container button:active{
+    width: 18.5vw;
+    height: 9.5vh;
+}
+
+#index_container button:hover{
+    filter: brightness(90%);
+}
+
+/*----------------------------------------------------------------*/
+/*----------pantalla de juego-------------------------------------*/
+
+#game_container{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+/*Botones imagenes------------------------------------*/
+
+.img_left:hover{filter: brightness(120%);}
+.img_left:active{
+    height: 99.3%;
+    width: 99.3%;
+}
+
+.img_right:hover{filter: brightness(120%);}
+.img_right:active{
+    height: 99.3%;
+    width: 99.3%;
+}
+
+/*----------------------------------------------------*/
+
+.img_container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.img_left{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: auto;
+    vertical-align: middle;
+}
+
+.img_right{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: auto;
+    vertical-align: middle; 
+}
+
+.img_left img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    filter: brightness(60%);
+}
+
+.img_right img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    filter: brightness(60%);
+}
+
+/*CITA--------------------------------------------------*/
+.quote{
+    margin: auto;
+    width: 80vw;
+    height: 20vh;
+    position: absolute;
+    top: 0%;
+    bottom: 65%;
+    right:0%;
+    left: 0%;
+    background-color: rgba(128, 128, 128, 0);
+    color: rgb(255, 255, 255);
+    /* color: rgba(255, 255, 255, 0.8); */
+    font-style: bold;
+    letter-spacing: 0.02em;
+    font-size: 2vw;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*----------------------------------------------------*/
+
+/*CHRONOMETER-----------------------------------------------*/
+
+/* .circle{
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    z-index: 1;
+    color: black;
+    font-size: 1.7em;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 36.5%;
+    bottom: 0%;
+    right:0%;
+    left: 0%;
+}
+
+.circle::before{
+    content: "";
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background-color: #fff;
+} */
+
+/* .timing{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 4px solid #23b42d;
+    animation: spin 10s linear infinite;
+    position: absolute;
+    place-items: center;
+    top: 43.3%;
+    left: 47.09%;
+} */
+
+.chronometer{
+    height: 68px;
+    width: 68px;
+    background-color: transparent;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    /* box-shadow: 20px 20px 40px rgba(115, 150, 118, 0.25); */
+    display: grid;
+    place-items: center;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.circle {
+    position: relative;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+  .circle:before {
+    content: "";
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  .time {
+    position: relative;
+    font-size: 2em;
+    color: black;
+  }
+  
+
+
+
+
+/*----------------------------------------------------*/
+
+/*FOOTER-----------------------------------------------*/
+.footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    position: absolute;
+    top: 89%;
+}
+
+.highScore{
+    color: white;
+    font-size: 1.7vw;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
+
+.whosaid{
+    margin: auto;
+    width: 30%;
+    color: rgba(255, 255, 255, 0.95);
+    border: 0.05em solid white;
+    letter-spacing: 0.02em;
+    font-size: 4vw;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 88%;
+    right: 0;
+    left: 0;
+    
+}
+
+.score{
+    margin: auto;
+    color: white;
+    font-size: 1.7vw;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+
+.score h5{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.highScore h5{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+/*-------------------------------------------------*/
+
+/*-----------pantalla final--------------------------------------------*/
+#gameover_container{
+    margin: auto;
+    /* display: block; */
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameover_container img{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.finalScore_text{
+    margin: auto;
+    font-size: 2.5vw;
+    font-family: sans-serif Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    width: 18%;
+    height: 6%;
+    background-position: center;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 13%;
+    right: 0;
+    left: 0;
+}
+
+.finalScore{
+    margin: auto;
+    font-size: 12vw;
+    font-family: sans-serif Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    width: 18%;
+    height: 14%;
+    background-position: center;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    line-height: 90%;
+    top: 19.2%;
+    right: 0;
+    left: 0;
+}
+
+#gameOver_buttons{
+    display: flex;
+}
+
+#backToMenuBtn{
+    margin: auto;
+    background-color: darkorchid;
+    padding: 1% 0% 1% 0%;
+    width: 19vw;
+    height: 9vh;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2.5vw;
+    font-family: bernier;
+    line-height: 100%;
+    color: whitesmoke;
+    letter-spacing: 0.01em;
+    border: 0em solid white;
+    border-radius: 0.9em;
+    background-color: rgb(93, 192, 94);
+    position: absolute;
+    top: 55%;
+    right: 20%;
+    left: 0;
+
+}
+
+#playAgainBtn{
+    margin: auto;
+    background-color: darkorchid;
+    padding: 1% 0% 1% 0%;
+    width: 19vw;
+    height: 9vh;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2.5vw;
+    font-family: bernier;
+    line-height: 100%;
+    color: whitesmoke;
+    letter-spacing: 0.01em;
+    border: 0em solid white;
+    border-radius: 0.9em;
+    background-color: rgb(93, 192, 94);
+    position: absolute;
+    top: 55%;
+    right: 0;
+    left: 20%;
+}
+
+#gameover_container button:active{
+    width: 18.5vw;
+    height: 8.5vh;
+}
+
+#gameover_container button:hover{
+    filter: brightness(80%);
+}
+
+
+/*---------------------------------------------------------------------*/
