@@ -124,7 +124,7 @@ function showTimer(){
     let progressValue = 10;
     let progressEndValue = 0;
     let circulo = 0;
-    let speed = 1400; //este es el intervalo en ms entre que se produce cada progreso en la barra con el progressValue--
+    let speed = 1500; //este es el intervalo en ms entre que se produce cada progreso en la barra con el progressValue--
 
     progress = setInterval(() => {
         progressValue--;
